@@ -1,0 +1,36 @@
+<div class="su_investment">
+  <div v-if="referred.isReferred" class="su_investment_mensaje_referido"><!--Hay que persistir el query utm_content y el utm_term hasta que se haya mandado el formulario-->
+    <div class="su_investment_mensaje_referido_container">
+      <h2><span>{{ referred.utm_term ? referred.utm_term : $route.query.utm_term }}</span>te ha invitado!</h2>
+      <p>Tienes un bono de regalo de <span>$100.000</span> para tu primera inversión</p>
+    </div>
+  </div>
+  <div class="su_investment_intro">
+      <h1>Oportunidades de Inversión</h1>
+      <p>
+        Selecciona una <b>garantía</b> y luego escoge el monto que quieres <b>invertir</b>
+
+      </p>
+    </div>
+    <div class="su_investment_opportunities_marketplace_container">
+      <div class="su_investment_opportunities_marketplace">
+        <div v-for="card in publicCards">
+          <card
+            @onInterestedUser="onInterestedUser(card)"
+            :public-card="card"
+          ></card>
+        </div>
+      </div>
+    </div>
+
+    <modal @onDismissModal="onDismissModal" :showModal="showDetail">
+      <form-card
+        :max="max"
+        :min="min"
+        :interest="interest"
+        :is-final-step="isFinalStep"
+        @onSubmitForm="onSubmitForm($event)"
+        :public-card="selectedCard"
+      />
+    </modal>
+</div>

@@ -1,0 +1,119 @@
+.su_testimonios {
+  padding: 3.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  @include for-tablet-portrait-up {
+    flex-direction: row;
+    margin-top: 2.4rem;
+    gap: 2.4rem;
+
+  }
+  &_column {
+    margin-right: 2.4rem;
+    .su_testimonios_intro {
+      margin-bottom: 3.2rem;
+    }
+  }
+  &_video_vertical {
+    width: 100%;
+    margin-bottom: 2.4rem;
+    background-color: $su-purple-light;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px $su-purple-darkest;
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+  }
+  &_video_horizontal {
+    width: 100%;
+    margin-bottom: 2.4rem;
+    background-color: $su-purple-darkest;
+    border-radius: 5px;
+    box-shadow: 4px 4px 0px $su-purple-light;
+    @include for-phone-only {
+      display: none;
+    }
+  }
+  &_history {
+    &_mobile {
+      &_quote {
+        margin: 1.6rem 0 1.6rem;
+        padding: 0 1.6rem;
+        &:last-child {
+          padding-top: 1.6rem;
+        }
+        p {
+          line-height: 1.45;
+          font-weight: 400;
+          color: $su-gray-dark;
+          span {
+            line-height: 0;
+            font-size: 4.8rem;
+            font-family: "Times New Roman", serif;
+            padding: 0.5rem;
+            font-weight: 900;
+            color: $su-purple-light;
+          }
+          &:first-child {
+            padding-top: 1.6rem;
+          }
+          &:last-child {
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: $su-purple-100;
+            text-align: right;
+          }
+        }
+      }
+      .su_horizontal_line {
+        background-color: $su-purple-20;
+        margin: 1.6rem 0;
+      }
+      @include for-tablet-portrait-up {
+        display: none;
+      }
+    }
+    &_desktop {
+      display: none;
+      padding: 0 1.6rem 0 0;
+      @include for-tablet-portrait-up {
+        display: block;
+      }
+      .su_horizontal_line {
+        background-color: $su-purple-20;
+        margin: 1rem 0;
+      }
+
+      &_quote {
+        &:first-child {
+          margin-bottom: 1.6rem;
+        }
+        &:last-child {
+          padding-top: 1.6rem;
+        }
+        p {
+          line-height: 1.45;
+          font-weight: 400;
+          color: $su-gray-dark;
+          span {
+            line-height: 0;
+            font-size: 4.8rem;
+            font-family: "Times New Roman", serif;
+            padding: 0.5rem;
+            font-weight: 900;
+            color: $su-purple-light;
+          }
+          &:first-child {
+            padding-top: 1.6rem;
+          }
+          &:last-child {
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            color: $su-purple-100;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

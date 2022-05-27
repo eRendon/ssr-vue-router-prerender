@@ -1,0 +1,8 @@
+SECTIONS
+
+Aquí deben ir las distintas secciones de contenido de cada página, o las que comparten varias páginas del website.
+
+Ejemplos: 
+    sección de hero del home
+    sección de equipo en nosotros
+    sección de tarjetas de inversión en inversiones

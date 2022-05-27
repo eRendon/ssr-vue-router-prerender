@@ -1,0 +1,329 @@
+.su_expo {
+  padding: 4.8rem 1.6rem;
+  @include for-tablet-portrait-up {
+    display: flex;
+    align-items: center;
+    margin: 1.6rem 0;
+    gap: 6rem;
+  }
+  /*------------------------------------*\
+    #INVESTMENT & LENDING CARD STYLES
+  \*------------------------------------*/
+  &_investment,
+  &_lending {
+    flex: 1;
+    border-radius: 5px;
+    padding: 1.6rem;
+    color: #ffffff;
+    padding-bottom: 1.6rem;
+    padding-bottom: clamp(1.6rem, 5vw, 3.2rem);
+    @include for-tablet-portrait-up {
+      padding-bottom: clamp(1.6rem, 3vw, 3.2rem);
+    }
+    @include for-tablet-landscape-up {
+      padding: 3.2rem;
+      max-width: 351px;
+    }
+    &_header {
+      margin-top: clamp(0.5rem, 2.2vw, 1.6rem);
+      margin-bottom: clamp(1.6rem, 5vw, 3.2rem);
+      @include for-tablet-portrait-up {
+        margin-top: clamp(0.5rem, 2.2vw, 1.6rem);
+        margin-bottom: clamp(1.6rem, 3vw, 3.2rem);
+      }
+      @include for-tablet-landscape-up {
+        margin-top: 0;
+      }
+      &_title {
+        display: flex;
+        align-items: center;
+        margin-bottom: clamp(1.6rem, 4vw, 2.4rem);
+        @include for-tablet-portrait-up {
+          margin-bottom: 2.4rem;
+        }
+
+        img {
+          width: clamp(2rem, 6vw, 2.8rem);
+        }
+        h3 {
+          font-weight: 900;
+          margin-left: 1rem;
+          font-size: clamp(2.1rem, 6vw, 3.2rem);
+          @include for-tablet-portrait-up {
+            font-size: clamp(2.1rem, 3vw, 3.2rem);
+          }
+        }
+      }
+    }
+    &_body {
+      p {
+        letter-spacing: 0.015em;
+        line-height: 1.35;
+      }
+      b {
+        font-weight: 700;
+        color: $su-yellow-60;
+      }
+      &_top {
+        font-size: clamp(1.6rem, 4.5vw, 2.1rem);
+        margin-bottom: clamp(2.4rem, 6.5vw, 3.2rem);
+        @include for-tablet-portrait-up {
+          font-size: clamp(1.5rem, 2.3vw, 2.1rem);
+          margin-bottom: clamp(2.4rem, 4vw, 3.2rem);
+        }
+        @include for-tablet-landscape-up {
+          font-size: 1.7rem;
+        }
+      }
+      &_box {
+        display: flex;
+        align-items: center;
+        padding: 1.9rem 1.6rem;
+        border-radius: 5px;
+        border: 1px solid $su-yellow-100;
+        h1 {
+          font-weight: 800;
+          letter-spacing: 0.005em;
+          color: #ffffff;
+          font-size: clamp(3.4rem, 10vw, 7rem);
+          @include for-tablet-portrait-up {
+            font-size: clamp(3.4rem, 5vw, 5rem);
+          }
+          @include for-tablet-landscape-up {
+            font-size: 3.8rem;
+          }
+        }
+        p {
+          color: $su-yellow-100;
+          font-size: clamp(1.4rem, 5vw, 5rem);
+          @include for-tablet-portrait-up {
+            font-size: clamp(1.4rem, 2vw, 2rem);
+          }
+        }
+      }
+      &_house {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: clamp(1.6rem, 5vw, 2.4rem);
+        p {
+          width: clamp(27rem, 65vw, 45rem);
+          font-size: clamp(1.4rem, 4vw, 2rem);
+          margin-right: 1rem;
+          @include for-tablet-portrait-up {
+            width: clamp(27rem, 25vw, 45rem);
+            font-size: clamp(1.4rem, 2vw, 1.6rem);
+          }
+        }
+        img {
+          width: clamp(3.4rem, 10vw, 5rem);
+          @include for-tablet-portrait-up {
+            width: clamp(3.4rem, 10vw, 5rem);
+          }
+        }
+      }
+    }
+    .su_caption {
+      text-align: right;
+      margin: 0.5rem 0 2.4rem 0;
+      color: $su-purple-20;
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      @include for-tablet-portrait-up {
+        font-size: clamp(1.2rem, 1.8vw, 1.4rem);
+      }
+    }
+  }
+  a {
+    .su_button {
+      width: 100%;
+      margin-bottom: 0.8rem;
+      box-shadow: 3px 3px 0px $su-purple-darkest;
+      img {
+        min-height: 14px;
+      }
+    }
+  }
+
+  /*------------------------------------*\
+    #INVESTMENT CARD STYLES
+  \*------------------------------------*/
+
+  &_investment {
+    position: relative;
+    background: $su-purple-120;
+    background-image:url(src/assets/img/su_pattern_elipses_dark.png), $su-purple-gradient-dark;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 4px 0px $su-yellow-100;
+    z-index: 2;
+    @include for-tablet-portrait-up {
+      margin-right: clamp(1rem, 2vw, 3.2rem);
+      margin-bottom: 0;
+    }
+    @include for-tablet-landscape-up {
+      margin-right: 0;
+    }
+    &_body {
+      &_box {
+        justify-content: space-around;
+        &_left,
+        &_right {
+          display: flex;
+          h1 {
+            margin-right: 0.5rem;
+          }
+          p {
+            font-weight: 700;
+            font-size: clamp(2.4rem, 7vw, 4rem);
+            @include for-tablet-portrait-up {
+              font-size: clamp(2.4rem, 3.5vw, 2.8rem);
+            }
+          }
+        }
+      }
+    }
+  }
+  /*------------------------------------*\
+    #SURETI SECTION STYLES
+  \*------------------------------------*/
+
+  &_sureti {
+    position: relative;
+    padding: 4rem 1.6rem;
+    @include for-tablet-portrait-up {
+      display: none;
+    }
+    @include for-tablet-landscape-up {
+      display: block;
+      flex: 1;
+      padding: 0.8rem;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      width: 80px;
+      height: 84px;
+      z-index: -1;
+      background-image: url("src/assets/img/su_pattern_elipses.svg");
+      @include for-tablet-landscape-up {
+        width: 212px;
+      }
+    }
+    &::before {
+      content: "";
+      top: -16px;
+      left: -16px;
+      @include for-tablet-landscape-up {
+        top: -32px;
+        left: -100px;
+      }
+
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      right: -16px;
+      @include for-tablet-landscape-up {
+        bottom: -18px;
+        right: -100px;
+      }
+
+    }
+    &_arrows-top,
+    &_arrows-bottom {
+      position: relative;
+      display: flex;
+      // @include for-tablet-landscape-up {
+      //   margin-bottom: 3.2rem;
+      // }
+    }
+    &_arrows-top {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 3.2rem;
+      img {
+        margin-right: 0.8rem;
+        transform: rotate(180deg);
+
+        @include for-tablet-landscape-up {
+          transform: rotate(90deg);
+        }
+      }
+    }
+    &_benefits {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-bottom: 0.8rem;
+      p,
+      .su_horizontal_line {
+        margin-bottom: 1.6rem;
+        @include for-tablet-landscape-up {
+          margin-bottom: 3.2rem;
+        }
+      }
+      p {
+        font-family: 'Inter', 'Roboto', Arial, Helvetica, sans-serif;
+        font-size: clamp(2rem, 5vw, 2.1rem);
+        font-weight: 780;
+        line-height: 135%;
+        &:first-child {
+          color: $su-purple_light;
+
+        }
+        &:nth-child(3) {
+          color: $su-purple-100;
+          margin-bottom: 3.2rem;
+          text-align: right;
+
+        }
+        &:nth-child(5) {
+          color: $su-purple-100;
+          @include for-phone-only {
+          }
+        }
+      }
+      .su_horizontal_line {
+        background-color: $su-purple-60;
+      }
+    }
+    &_arrows-bottom {
+      justify-content: flex-end;
+      img {
+        margin-left: 0.8rem;
+        transform: rotate(180deg);
+
+        @include for-tablet-landscape-up {
+          transform: rotate(90deg);
+        }
+
+      }
+    }
+  }
+
+  /*------------------------------------*\
+    #LENDING CARD STYLES
+  \*------------------------------------*/
+
+  &_lending {
+    background: $su-purple-light;
+    background-image:url(src/assets/img/su_pattern_elipses_light.png), $su-purple-gradient-light;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 4px 4px 0px $su-yellow-100;
+    &_body {
+      &_box {
+        justify-content: center;
+        img {
+          margin-right: 1rem;
+          @include for-tablet-portrait-up {
+            height: clamp(3rem, 4vw, 3.8rem);
+          }
+        }
+      }
+    }
+  }
+}

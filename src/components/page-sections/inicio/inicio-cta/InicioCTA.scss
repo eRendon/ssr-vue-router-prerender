@@ -1,0 +1,74 @@
+.su_cta {
+  padding: 2.4rem 0;
+  background-color: $su-purple-lightest;
+  @include for-tablet-portrait-up {
+    display: flex;
+  }
+  &_inversion, &_prestamo {
+    margin: 2.4rem 2.4rem;
+    padding: 1.6rem 1.6rem 3.2rem;
+    border-radius: 5px;
+    color: #ffffff;
+    flex: 1;
+    @include for-tablet-landscape-up {
+      padding: 2.4rem 3.2rem 3.2rem;
+    }
+    &_text {
+      h1 {
+        font-size: 2.1rem;
+        font-weight: 800;
+        line-height: 152%;
+        letter-spacing: -0.019em;
+        margin: 1rem 0 2.4rem 0;
+        @include for-tablet-landscape-up {
+          font-size: 2.8rem;
+          margin: 1.6rem 0 3.2rem;
+        }
+      }
+    }
+    a {
+      .su_button {
+        box-shadow: 3px 3px 0 $su-purple-darkest;
+        @include for-tablet-landscape-up {
+          font-size: 2.1rem;
+        }
+        img {
+          height: 16px;
+        }
+      }
+    }
+
+  }
+  &_inversion {
+    background-image: url(src/assets/img/su_pattern_elipses_dark.png), $su-purple-gradient-dark;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  box-shadow: 4px 4px 0 $su-yellow-80;
+  }
+  &_prestamo {
+    background-image: url(src/assets/img/su_pattern_elipses_light.png), $su-purple-gradient-light;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  box-shadow: 4px 4px 0 $su-yellow-80;
+  }
+  &_house {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    margin: 2.4rem 0 2.4rem;
+    p {
+      font-size: 1.6rem;
+      line-height: 135%;
+      @include for-tablet-landscape-up {
+        font-size: 2.1rem;
+      }
+    }
+    img {
+      min-height: 4.4rem;
+      padding-right: 1rem;
+    }
+  }
+}

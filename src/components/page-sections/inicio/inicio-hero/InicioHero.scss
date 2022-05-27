@@ -1,0 +1,172 @@
+#sureti-home-banner {
+  height: 210vw;
+  background-image: url("src/assets/img/banner-mobile.jpeg");
+}
+
+.home-banner-container {
+  @include for-tablet-portrait-up {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1152px;
+    margin: 0 auto;
+  }
+}
+
+.home-banner-lead-in {
+  display: block;
+  padding: 25px 16px 55px;
+  padding-top: calc(100vw - 240px);
+  @media only screen and (min-width: 380px) {
+    padding-top: calc(100vw - 270px);
+  }
+  @media only screen and (min-width: 440px) {
+    padding-top: calc(100vw - 290px);
+  }
+}
+
+.home-banner-lead-in img {
+  display: block;
+  height: 24px;
+  margin: 0;
+}
+.home-banner-lead-in p {
+  font-family: "Montserrat", "Roboto", Arial, sans-serif;
+  font-size: clamp(2.1rem, 7vw, 4.2rem);
+  line-height: 135%;
+  letter-spacing: -0.019em;
+  font-weight: 800;
+  color: #fff;
+  margin: 1rem 0 2rem;
+  span {
+    // background-color: $su-yellow-80;
+    // padding: 2px 6px;
+    // color: $su-purple-100;
+  }
+}
+.home-banner-lead-in .sureti-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(14px, 4vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  padding: clamp(1.6rem, 5vw, 2.4rem);
+  background: url(src/assets/img/su_pattern_elipses_dark.png),
+    $su-purple-gradient-dark;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 3px 3px 0px $su-yellow-100;
+  border-radius: 5px;
+  color: #fff;
+  img {
+    height: 14px;
+  }
+}
+
+#home-banner-investment {
+  margin-top: 2rem;
+}
+
+#home-banner-loan {
+  img {
+    margin: auto 0 auto auto;
+  }
+
+  p {
+    text-align: right;
+  }
+}
+#home-banner-investment .sureti-button {
+  /* border: solid 2px #5747DC; */
+  background: url(src/assets/img/su_pattern_elipses_light.png), $su-purple-gradient-light;
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: cover;
+box-shadow: 3px 3px 0px $su-yellow-100;
+  margin: auto 0 auto auto;
+}
+
+
+.home-banner-lead-in .sureti-button:hover {
+  @include animation1; //Animation Mixin - mixins.scss
+}
+#home-banner-investment .sureti-button:hover {
+  background-color: #fff;
+}
+
+#home-stats-banner {
+  display: none;
+}
+
+@media all and (min-width: 590px) {
+  #home-banner-investment {
+    margin-top: 0;
+  }
+
+  #sureti-home-banner {
+    height: 320px;
+    background-image: url("src/assets/img/banner.jpeg");
+  }
+  #sureti-home-banner-wrap {
+    display: block;
+  }
+  #sureti-home-banner-wrap-mobile {
+    display: none;
+  }
+
+  .home-banner-lead-in {
+    display: inline-block;
+    padding: 30px;
+    padding-top: 140px;
+  }
+  .lead-in-wrap {
+    width: 240px;
+  }
+  .home-banner-lead-in img {
+    height: 24px;
+    padding: 0 2px;
+    margin: 0;
+  }
+  .home-banner-lead-in p {
+    font-size: 22px;
+    line-height: 24px;
+  }
+}
+@media all and (min-width: 920px) {
+  #sureti-home-banner {
+    height: 450px;
+  }
+  .home-banner-lead-in {
+    display: inline-block;
+    padding: 30px;
+    padding-top: 240px;
+  }
+}
+@media all and (min-width: 1200px) {
+  #sureti-home-banner {
+    height: 580px;
+    text-align: center;
+  }
+  .home-banner-lead-in {
+    padding-top: 280px;
+    max-width: 600px;
+    text-align: left;
+  }
+  .lead-in-wrap {
+    width: 355px;
+  }
+  .home-banner-lead-in img {
+    height: 28px;
+    margin: 0;
+  }
+  .home-banner-lead-in p {
+    font-size: 30px;
+    line-height: 135%;
+    margin-bottom: 2.4rem;
+  }
+  .home-banner-lead-in .sureti-button {
+    font-size: 2.1rem;
+    padding: 2rem 1.6rem;
+  }
+}

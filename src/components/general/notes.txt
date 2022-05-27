@@ -1,0 +1,8 @@
+GENERAL
+
+Aquí deben ir los componentes que son parte del layout general del website - que son consistentes para todas las páginas.
+
+Ejemplos:
+    barra de navegación del website - header
+    footer del website
+    drawer del menú

@@ -1,0 +1,7 @@
+SINGLE ITEMS
+
+Aquí deben ir los componentes que representan a una unidad singular. 
+
+Ejemplo:
+    componente de tarjeta de inversión
+    componente de cada movimiento que se muestra en la lista de movimientos (pero no la lista como tal)

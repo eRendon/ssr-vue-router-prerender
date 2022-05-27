@@ -1,0 +1,39 @@
+  <div class="su_prestamos">
+    <div v-if="referred.isReferred" class="su_prestamos_mensaje_referido"><!--Hay que persistir el query.utm_content y el utm_term hasta que se haya mandado el formulario-->
+      <div class="su_prestamos_mensaje_referido_container">
+        <h2><span>{{referred.utm_term ? referred.utm_term : $route.query.utm_term }}</span>te ha invitado!</h2>
+        <p>Tienes un bono de regalo de <span>$100.000</span> para tu primer pago</p>
+      </div>
+    </div>
+    <div class="su_prestamos_intro">
+      <div class="su_prestamos_intro_header">
+        <h1>Préstamo sobre hipoteca</h1>
+        <p>
+          Paga mensualmente <b>solo intereses</b> y abona a capital cuando
+          desees,
+          <b>sin penalidades.</b>
+        </p>
+      </div>
+      <div class="su_prestamos_requisitos">
+        <h2>Único requisito es ser dueño de un inmueble</h2>
+        <img src="../../../src/assets/icons/su_house.svg" alt="" />
+      </div>
+    </div>
+    <div class="su_prestamos_form">
+      <form-card
+          :max="500000000"
+          :min="20000000"
+          :interest="2"
+          :isLoan="true"
+          :is-final-step="false"
+          @onSubmitForm="onSubmitForm($event)"
+          class="su_form"
+        />
+    </div>
+    <modal @onDismissModal="onDismissModal" :showModal="showModal">
+      <div class="su_user_form_msg">
+        <h2>¡Muchas Gracias!</h2>
+        <p> Te contactaremos en breve.</p>
+      </div>
+    </modal>
+  </div>

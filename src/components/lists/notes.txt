@@ -1,0 +1,7 @@
+LISTS
+
+Aquí deben ir componentes que muestran algún tipo de lista de otros componentes tipo single-ITEMS
+
+Ejemplos:
+    La lista de movimientos de una inversión
+    La grilla de tarjetas de oportunidad de inversión

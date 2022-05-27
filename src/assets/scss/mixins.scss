@@ -1,0 +1,113 @@
+/********* Media Queries *********/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+  
+@mixin for-tablet-landscape-up {
+  @media (min-width: 1000px) { @content; }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin for-desktop-down {
+  @media (max-width: 1199px) { @content; }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+/****** Animation *****/
+
+@mixin animation1 {
+  @keyframes animation-hover {
+    0% {
+      transform: scale(1);
+    }
+    100% {transform: scale(1.03);}
+  }
+  
+  animation-name: animation-hover;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@mixin animation2 {
+  @keyframes animation-hover-2 {
+    0% {
+      background-color: $su-yellow-100;
+      color: $su-purple-180;
+    }
+    100% {
+      background-color: white;
+      color: $su-purple-100;
+    }
+  }
+  
+  animation-name: animation-hover-2;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@mixin animation3 {
+  @keyframes animation-hover-3 {
+    0% {
+      background-color: none;
+      border-radius: 3px;
+    }
+    100% {
+      background-color: $su-yellow-100;
+      color: $su-purple-100;
+      border-radius: 3px;
+    }
+  }
+  
+  animation-name: animation-hover-3;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@mixin animation4 {
+  @keyframes animation-hover-4 {
+    0% {
+    }
+    100% {
+      opacity: 0.7;
+    }
+  }
+  
+  animation-name: animation-hover-4;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@mixin animation-whatsapp {
+  @keyframes animation-whatsapp {
+    0% {
+      bottom: -100px;
+    }
+    80%{
+      bottom: 25px;
+    }
+    100% {
+      bottom: 16px;
+    }
+  }
+  animation-name: animation-whatsapp;
+  animation-duration: 0.45s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode:forwards;
+  animation-delay: 2s;
+}
+

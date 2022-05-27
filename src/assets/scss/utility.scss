@@ -1,0 +1,121 @@
+/*------------------------------------*\
+  #FLEX CLASSES
+\*------------------------------------*/
+
+.su_flex {
+  display: flex;
+  &_ai {
+    &_center {
+      align-items: center;
+    }
+  }
+  &_jc {
+    &_space-between {
+      justify-content: space-between;
+    }
+  }
+}
+
+/*------------------------------------*\
+  #UTILITY CLASSES
+\*------------------------------------*/
+
+.no-padding {
+  padding: 0;
+}
+
+.su_horizontal_line {
+  height: 1px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.su_vertical_line {
+  height: 100%;
+  width: 1px;
+  background-color: #ffffff;
+}
+a {
+  //Estilos para Boton General
+  text-decoration: none;
+}
+.su_button {
+  width: 100%;
+  padding: 2rem;
+  border: 0;
+  border-radius: 5px;
+  font-family: "Inter", "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.0125em;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  background-color: $su-yellow-100;
+  color: $su-purple-180;
+  box-shadow: 3px 3px 0px $su-purple-darkest;
+  @include for-tablet-portrait-up {
+    font-size: clamp(1.4rem, 2.3vw, 1.8rem);
+    &:hover {
+      @include animation2;
+    }
+  }
+
+}
+
+
+.su_section {
+  &_intro {
+    margin-bottom: 2.4rem;
+    h3 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 400;
+      color: $su-purple-100;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: #222222;
+      letter-spacing: -0.015em;
+      margin-bottom: 1.8rem;
+      line-height: 1.2;
+      max-width: 400px;
+    }
+    p {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      color: $su-gray-dark;
+      line-height: 1.45;
+      max-width: 85vw;
+      @include for-tablet-landscape-up {
+        max-width: 450px;
+      }
+    }
+  }
+}
+
+.su_section_full-width_container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.p-body {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $su-gray-dark;
+  line-height: 1.45;
+  max-width: 85vw;
+}
+
+/*------------------------------------*\
+  #SVG COLOR CLASSES
+\*------------------------------------*/
+
+.svg_white {
+  filter: invert(92%) sepia(93%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+}
