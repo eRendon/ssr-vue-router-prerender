@@ -2,12 +2,10 @@ import vue from '@vitejs/plugin-vue'
 import ssr from 'vite-plugin-ssr/plugin'
 import { UserConfig } from 'vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
-import ViteSvgIcons from 'vite-plugin-svg-icons';
 import AutoImport from 'unplugin-auto-import/vite';
-import styleImport, { ElementPlusResolve } from 'vite-plugin-style-import'
 import path from 'path'
 import Components from 'unplugin-vue-components/vite';
-import { minifyHtml } from "vite-plugin-html";
+import { createHtmlPlugin } from "vite-plugin-html";
 
 const config: UserConfig = {
   plugins: [
@@ -31,18 +29,7 @@ const config: UserConfig = {
       // https://github.com/element-plus/element-plus/issues/4923
       // resolvers: [ElementPlusResolver()],
     }),
-    ViteSvgIcons({
-      // Specify the icon folder to be cached
-      iconDirs: [path.resolve(process.cwd(), 'assets/icons')],
-      // Specify symbolId format
-      symbolId: 'icon-[dir]-[name]',
-    }),
-    minifyHtml(),
-    styleImport({
-      resolves:[
-        ElementPlusResolve(),
-      ],
-    })
+    createHtmlPlugin(),
   ],
   css: {
     preprocessorOptions: {

@@ -151,7 +151,7 @@
   &_investment {
     position: relative;
     background: $su-purple-120;
-    background-image:url(src/assets/img/su_pattern_elipses_dark.png), $su-purple-gradient-dark;
+    background-image:url("src/assets/img/su_pattern_elipses_dark.png"), $su-purple-gradient-dark;
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -205,7 +205,7 @@
       width: 80px;
       height: 84px;
       z-index: -1;
-      background-image: url("src/assets/img/su_pattern_elipses.svg");
+      background-image: url("~/assets/img/su_pattern_elipses.svg");
       @include for-tablet-landscape-up {
         width: 212px;
       }
