@@ -51,7 +51,7 @@
   font-weight: 700;
   letter-spacing: 0.005em;
   padding: clamp(1.6rem, 5vw, 2.4rem);
-  background: url(~/assets/img/su_pattern_elipses_dark.png),
+  background: url(src/assets/img/su_pattern_elipses_dark.png),
     $su-purple-gradient-dark;
   background-position: left bottom;
   background-repeat: no-repeat;
@@ -79,7 +79,7 @@
 }
 #home-banner-investment .sureti-button {
   /* border: solid 2px #5747DC; */
-  background: url(~/assets/img/su_pattern_elipses_light.png), $su-purple-gradient-light;
+  background: url(src/assets/img/su_pattern_elipses_light.png), $su-purple-gradient-light;
   background-position: right top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,7 +106,7 @@ box-shadow: 3px 3px 0px $su-yellow-100;
 
   #sureti-home-banner {
     height: 320px;
-    background-image: url("~/assets/img/banner.jpeg");
+    background-image: url("src/assets/img/banner.jpeg");
   }
   #sureti-home-banner-wrap {
     display: block;

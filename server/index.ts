@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express'
 
 const express = require('express')
-const { renderPage } = require('vite-plugin-ssr')
+const { createPageRenderer } = require('vite-plugin-ssr')
 const vite = require('vite')
 
 const isProduction = process.env.NODE_ENV === 'production'
@@ -23,8 +23,7 @@ async function startServer() {
     app.use(viteDevServer.middlewares)
   }
 
-  //const renderPage =
-  //renderPage({ viteDevServer, isProduction, root })
+  const renderPage = createPageRenderer({ viteDevServer, isProduction, root })
   app.get('*', async (req:Request, res: Response, next: NextFunction) => {
     const url = req.originalUrl
     const pageContextInit = {
