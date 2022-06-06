@@ -5,14 +5,10 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "ts-node ./server",
-    "prod": "npm run build && npm run server:prod",
     "// Build for production": "",
-    "build": "npm run build && npm run server:prod",
-    "build:clean": "rimraf dist/",
-    "build:vite": "vite build && vite build --ssr",
-    "build:prerender": "vite-plugin-ssr prerender",
-    "// Static serve for production": "",
-    "prod:serve": "server dist/client/ --listen 3000",
+    "prod": "npm run build && npm run server:prod",
+    "build": "vite build && vite build --ssr",
+    "server": "node ./server",
     "server:prod": "cross-env NODE_ENV=production node ./server"
   },
   "dependencies": {
