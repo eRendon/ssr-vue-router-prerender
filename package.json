@@ -2,7 +2,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "ts-node ./server",
-    "prod": "npm run build && npm run prod:serve",
+    "prod": "npm run build && npm run prod:serve && npm run prod:serve",
     "// Build for production": "",
     "build": "npm run build:clean && npm run build:vite",
     "build:clean": "rimraf dist/",
