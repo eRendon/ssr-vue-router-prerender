@@ -7,7 +7,7 @@
     "dev": "ts-node ./server",
     "prod": "npm run build && npm run server:prod",
     "// Build for production": "",
-    "build": "npm run build:clean && npm run build:vite && npm run prod:serve && npm run server:prod",
+    "build": "npm run build && npm run server:prod",
     "build:clean": "rimraf dist/",
     "build:vite": "vite build && vite build --ssr",
     "build:prerender": "vite-plugin-ssr prerender",
